@@ -10,7 +10,7 @@ variable "resource_group_name" {
   description = "name of the resource group."
 }
 
-variable "azurerm_kubernetes_cluster_name" {
+variable "azurerm_kubernetes_cluster_name"  {
   type        = string
   default     = "helloppucluster"
   description = "name of cluster."
