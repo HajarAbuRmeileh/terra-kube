@@ -38,8 +38,7 @@ jobs:
       uses: hashicorp/terraform-github-actions@master
       with:
         tf_actions_version: 1.1.9
-        run: |
-         terraform init -migrate-state
+        tf_actions_subcommand: 'init'
         tf_actions_working_dir: "./infra"
  
     - name: 'Terraform Validate'
