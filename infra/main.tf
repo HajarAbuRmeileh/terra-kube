@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 
-resource "azurerm_kubernetes_cluster" "k8s" {
+resource "azurerm_kubernetes_cluster" "rg" {
   location            = var.resource_group_location
   name                = var.azurerm_kubernetes_cluster_name
   resource_group_name = var.resource_group_name
