@@ -1,4 +1,5 @@
 
+
 resource "azurerm_resource_group" "example" {
   location = var.resource_group_location
   name     = var.resource_group_name
@@ -9,6 +10,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   location            = var.resource_group_location
   name                = var.azurerm_kubernetes_cluster_name
   resource_group_name = var.resource_group_name
+  dns_prefix          = "my"
 
   identity {
     type = "SystemAssigned"
@@ -31,3 +33,6 @@ resource "azurerm_kubernetes_cluster" "example" {
     load_balancer_sku = "standard"
   }
 }
+
+
+

@@ -1,4 +1,12 @@
 terraform {
+    backend "azurerm" {
+        resource_group_name  = "tf_state_group"
+        storage_account_name = "projecttfstatestorage"
+        container_name       = "tfstate"
+        key                  = "terraform.tfstate"
+    }
+}
+terraform {
   required_version = ">=1.0"
 
   required_providers {

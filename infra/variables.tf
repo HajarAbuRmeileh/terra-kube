@@ -3,17 +3,15 @@ variable "resource_group_location" {
   default     = "eastus"
   description = "Location of the resource group."
 }
-
 variable "resource_group_name" {
   type        = string
   default     = "hajarhello"
   description = "name of the resource group."
 }
-
 variable "azurerm_kubernetes_cluster_name" {
   type        = string
   default     = "helloppucluster"
-  description = "name of cluster."
+  description = "name of the cluster."
 }
 
 variable "node_count" {
