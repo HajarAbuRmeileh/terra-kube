@@ -1,29 +1,29 @@
+variable "resource_group_location" {
+  type        = string
+  default     = "eastus"
+  description = "Location of the resource group."
+}
+
 variable "resource_group_name" {
-  type = string
-  description = "Resource Group name in Microsoft Azure"
+  type        = string
+  default     = "hajarhello"
+  description = "name of the resource group."
 }
 
-variable "location" {
-  type = string
-  description = "Resources location in Microsoft Azure"
+variable "azurerm_kubernetes_cluster_name" {
+  type        = string
+  default     = "helloppucluster"
+  description = "name of cluster."
 }
 
-variable "cluster_name" {
-  type = string
-  description = "AKS name in Microsoft Azure"
+variable "node_count" {
+  type        = number
+  description = "The initial quantity of nodes for the node pool."
+  default     = 1
 }
 
-variable "kubernetes_version" {
-  type = string
-  description = "Kubernetes version"
-}
-
-variable "system_node_count" {
-  type = number
-  description = "Number of AKS worker nodes"
-}
-
-variable "node_resource_group" {
-  type = string
-  description = "Resource Group name for cluster resources in Microsoft Azure"
+variable "msi_id" {
+  type        = string
+  description = "The Managed Service Identity ID. Set this value if you're running this example using Managed Identity as the authentication method."
+  default     = null
 }
